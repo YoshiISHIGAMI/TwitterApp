@@ -10,6 +10,7 @@
 		792E114FF001FE8A2D6866CA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8CA2C0848422EE3506A003 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		921A3C211BA51B4800546860 /* RakutenFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921A3C201BA51B4800546860 /* RakutenFetcher.swift */; };
 		921A3C231BA51E5C00546860 /* RakutenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921A3C221BA51E5C00546860 /* RakutenItem.swift */; };
+		921A3C251BA55D8F00546860 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921A3C241BA55D8F00546860 /* TimeLineTableViewCell.swift */; };
 		924589591BA41417000A787E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924589581BA41417000A787E /* AppDelegate.swift */; };
 		9245895B1BA41417000A787E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245895A1BA41417000A787E /* ViewController.swift */; };
 		9245895E1BA41417000A787E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9245895C1BA41417000A787E /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		002A87F78F69E6282DB0FDAE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		921A3C201BA51B4800546860 /* RakutenFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakutenFetcher.swift; sourceTree = "<group>"; };
 		921A3C221BA51E5C00546860 /* RakutenItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RakutenItem.swift; sourceTree = "<group>"; };
+		921A3C241BA55D8F00546860 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
 		924589531BA41417000A787E /* Twitter2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924589571BA41417000A787E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		924589581BA41417000A787E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,8 +103,7 @@
 		924589551BA41417000A787E /* Twitter2App */ = {
 			isa = PBXGroup;
 			children = (
-				924589581BA41417000A787E /* AppDelegate.swift */,
-				9245895A1BA41417000A787E /* ViewController.swift */,
+				921A3C241BA55D8F00546860 /* TimeLineTableViewCell.swift */,
 				924589781BA4199C000A787E /* TimeLineTableViewController.swift */,
 				921A3C201BA51B4800546860 /* RakutenFetcher.swift */,
 				921A3C221BA51E5C00546860 /* RakutenItem.swift */,
@@ -111,6 +112,8 @@
 				924589611BA41417000A787E /* LaunchScreen.xib */,
 				924589561BA41417000A787E /* Supporting Files */,
 				92AE53781BA4286500E0C545 /* Twitter2App-Bridging-Header.h */,
+				924589581BA41417000A787E /* AppDelegate.swift */,
+				9245895A1BA41417000A787E /* ViewController.swift */,
 				92AE537B1BA4305F00E0C545 /* image */,
 			);
 			path = Twitter2App;
@@ -312,6 +315,7 @@
 			files = (
 				9245895B1BA41417000A787E /* ViewController.swift in Sources */,
 				924589591BA41417000A787E /* AppDelegate.swift in Sources */,
+				921A3C251BA55D8F00546860 /* TimeLineTableViewCell.swift in Sources */,
 				921A3C211BA51B4800546860 /* RakutenFetcher.swift in Sources */,
 				924589791BA4199C000A787E /* TimeLineTableViewController.swift in Sources */,
 				921A3C231BA51E5C00546860 /* RakutenItem.swift in Sources */,

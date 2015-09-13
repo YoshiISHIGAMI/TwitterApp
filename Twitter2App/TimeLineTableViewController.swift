@@ -31,18 +31,18 @@ class TimeLineTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TimeLineTableViewCell
         
         //cell.textLabel?.text = dataArray[indexPath.row]["title"]
         if let title = dataArray[indexPath.row]["title"]{
-            cell.textLabel?.text = title
+            cell.tweetLabel?.text = title
         }
         
-//        if let imageURLString = dataArray[indexPath.row]["image"],
-//            let imageURL = NSURL(string: imageURLString){
-//                cell.imageView?.sd_setImageWithURL(imageURL, placeholderImage: UIImage(named: "placeholder"))
-//                cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
-//        }
+        if let imageURLString = dataArray[indexPath.row]["image"],
+            let imageURL = NSURL(string: imageURLString){
+                cell.iconImageView?.sd_setImageWithURL(imageURL, placeholderImage: UIImage(named: "placeholder"))
+                cell.iconImageView?.contentMode = UIViewContentMode.ScaleAspectFill
+        }
         return cell
     }
     
@@ -141,13 +141,24 @@ class TimeLineTableViewController: UITableViewController {
                 
                 for entry in res{
                     
+                    var dic:[String:String] = [:]
+                    
                     if let user = entry["user"] as? NSDictionary, let name = user["name"] as? String{
                         println("ユーザー名：「\(name)」")
                     }
+                    
+                    if let user = entry["user"] as? NSDictionary, let profile_image_url_https = user["profile_image_url_https"] as? String{
+                        dic["image"] = profile_image_url_https
+                        println("ユーザー画層URL：「\(profile_image_url_https)」")
+                    }
+                    
                     if let text = entry["text"] as? String{
                         //dataArray の配列内に連想配列
-                        self.dataArray.append(["title":text])
+                        dic["title"] = text
+                        println(text)
                     }
+                    
+                    self.dataArray.append(dic)
                     println("------------------------")
                 }
                 //追記
